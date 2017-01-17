@@ -33,6 +33,7 @@ body{
     width: 359px;
     margin: 0 auto;
 }
+
 img{
     max-width: 50px;
 }
@@ -96,6 +97,9 @@ img{
                     font-weight: 300;
                     padding: 4px 27px 3px;
                     width: 231px;
+                    &:focus{
+                        outline: none;
+                    }
                 }
                 &:before{
                     content: '';
@@ -128,6 +132,9 @@ img{
                 margin-top: 8px;
                 margin-right: 5px;
                 border-radius: 9px;
+                &:focus{
+                    outline: none;
+                }
             }
         }
     }
@@ -141,7 +148,7 @@ img{
     cursor: pointer;
     list-style: none;
     background: @light-color;
-    min-width: 279px;
+    min-width: 277px;
     &.hide{
         display: none;
     }

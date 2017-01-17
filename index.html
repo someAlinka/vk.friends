@@ -30,18 +30,18 @@
 	</div>
 	<script type="text/x-handlebars-template" id="friendsListTemplate">
 	    {{#each list}}
-	    <li class="friend">
-	        <div class="photo"><img src="{{photo_50}}" alt=""></div>
-	        <span class="name">
-	        
-	        {{#if name}}
-	            {{name}}
-	        {{else}}
-	            {{first_name}} {{last_name}}
-	        {{/if}}
-	        </span>
-	        <span class="friend_icon"></span>
-	    </li>
+		    <li class="friend">
+		        <div class="photo"><img src="{{photo_50}}" alt=""></div>
+		        <span class="name">
+		        
+		        {{#if name}}
+		            {{name}}
+		        {{else}}
+		            {{first_name}} {{last_name}}
+		        {{/if}}
+		        </span>
+		        <span class="friend_icon"></span>
+		    </li>
 	    {{/each}}
 	</script>
 	<script type="text/javascript" src="js/script.js"></script>

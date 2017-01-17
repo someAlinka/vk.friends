@@ -227,6 +227,9 @@ img {
   padding: 4px 27px 3px;
   width: 231px;
 }
+.popup_wrapper .friends_popup .friends_list .search_wrap input:focus {
+  outline: none;
+}
 .popup_wrapper .friends_popup .friends_list .search_wrap:before {
   content: '';
   display: block;
@@ -258,6 +261,9 @@ img {
   margin-right: 5px;
   border-radius: 9px;
 }
+.popup_wrapper .friends_popup .popup_footer .save:focus {
+  outline: none;
+}
 .friend {
   border-bottom: 1px solid #f0f0f0;
   margin: 0 15px;
@@ -266,7 +272,7 @@ img {
   cursor: pointer;
   list-style: none;
   background: #ffffff;
-  min-width: 279px;
+  min-width: 277px;
 }
 .friend.hide {
   display: none;
