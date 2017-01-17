@@ -1,0 +1,309 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Light.eot");
+  src: url("../fonts/FiraSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Light.woff") format("woff"), url("../fonts/FiraSans-Light.ttf") format("truetype"), url("../fonts/FiraSans-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Medium.eot");
+  src: url("../fonts/FiraSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Medium.woff") format("woff"), url("../fonts/FiraSans-Medium.ttf") format("truetype"), url("../fonts/FiraSans-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+body * {
+  font-family: 'Fira Sans', sans-serif;
+  color: #4f4f4f;
+  font-weight: 500;
+  font-size: 12px;
+  user-select: none;
+}
+body {
+  width: 359px;
+  margin: 0 auto;
+}
+img {
+  max-width: 50px;
+}
+.friends_logo {
+  width: 102px;
+  height: 25px;
+  background: url(../img/sprite.png) 0 0 no-repeat;
+  margin: 15px auto;
+}
+.popup_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.popup_wrapper .friends_popup {
+  background: #ffffff;
+  width: 618px;
+  margin: 60px auto;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+.popup_wrapper .friends_popup .popup_header {
+  background: #ff8663;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 16px 14px 13px;
+}
+.popup_wrapper .friends_popup .popup_header #close {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(../img/sprite.png) -1px -26px no-repeat;
+  top: 15px;
+  right: 11px;
+}
+.popup_wrapper .friends_popup .friends_list {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.popup_wrapper .friends_popup .friends_list.left_friends {
+  border-right: 1px solid #f0f0f0;
+  margin-right: -3px;
+}
+.popup_wrapper .friends_popup .friends_list ul {
+  height: 324px;
+  overflow-y: auto;
+}
+.popup_wrapper .friends_popup .friends_list .search_wrap {
+  background: #f0f0f0;
+  padding: 10px 15px;
+  position: relative;
+}
+.popup_wrapper .friends_popup .friends_list .search_wrap input {
+  color: #9f9f9f;
+  background: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-weight: 300;
+  padding: 4px 27px 3px;
+  width: 231px;
+}
+.popup_wrapper .friends_popup .friends_list .search_wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url(../img/sprite.png) -83px -30px no-repeat;
+  top: 16px;
+  left: 21px;
+}
+.popup_wrapper .friends_popup .friends_list h2 {
+  padding: 13px 0px 5px;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0 15px;
+}
+.popup_wrapper .friends_popup .popup_footer {
+  background: #f0f0f0;
+  height: 45px;
+  margin-top: -1px;
+}
+.popup_wrapper .friends_popup .popup_footer .save {
+  float: right;
+  background: #ff8663;
+  border: none;
+  color: #fff;
+  font-weight: 300;
+  padding: 5px 15px;
+  margin-top: 8px;
+  margin-right: 5px;
+  border-radius: 9px;
+}
+.friend {
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0 15px;
+  padding: 5px 0;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  background: #ffffff;
+  min-width: 279px;
+}
+.friend.hide {
+  display: none;
+}
+.friend.current {
+  position: absolute;
+  background: #f0f0f0;
+  pointer-events: none;
+}
+.friend:hover {
+  background: #f0f0f0;
+}
+.friend .photo {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+.friend .photo img {
+  width: 100%;
+}
+.friend .name {
+  display: inline-block;
+  vertical-align: middle;
+}
+.friend .friend_icon {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background: url(../img/sprite.png) -26px -26px no-repeat;
+  right: 5px;
+  top: 20px;
+}
+#allFriends .friend_icon {
+  background-position: -54px -28px;
+}

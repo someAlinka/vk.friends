@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friends List</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script src="http://vk.com/js/api/openapi.js"></script>
+</head>
+<body>
+	<header class="friends_logo"></header>
+	<div class="popup_wrapper">
+		<div class="friends_popup" id="popup">
+			<div class="popup_header">Выберите друзей <span id="close"></span></div>
+			<div class="friends_list left_friends">
+				<div class="search_wrap"><input type="text" id="searchAllFriends" placeholder="Начните вводить имя друга"></div>
+				<h2>Ваши друзья</h2>
+				<ul id="allFriends"></ul>
+			</div>
+			<div class="friends_list right_friends">
+				<div class="search_wrap"><input type="text" id="searchFriends" placeholder="Название"></div>
+				<h2>Друзья в списке</h2>
+				<ul id="friendsList"></ul>
+			</div>
+			<div class="popup_footer">
+				<button class="save" id="save">Сохранить</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/x-handlebars-template" id="friendsListTemplate">
+	    {{#each list}}
+	    <li class="friend">
+	        <div class="photo"><img src="{{photo_50}}" alt=""></div>
+	        <span class="name">
+	        
+	        {{#if name}}
+	            {{name}}
+	        {{else}}
+	            {{first_name}} {{last_name}}
+	        {{/if}}
+	        </span>
+	        <span class="friend_icon"></span>
+	    </li>
+	    {{/each}}
+	</script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

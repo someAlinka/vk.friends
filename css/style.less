@@ -1,0 +1,185 @@
+@import "less/_reset.less";
+@import "less/_settings.less";
+
+@font-face { // чет не подключился через гугл :(
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-Light.eot");
+    src: url("../fonts/FiraSans-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FiraSans-Light.woff") format("woff"),
+    url("../fonts/FiraSans-Light.ttf") format("truetype"),
+    url("../fonts/FiraSans-Light.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-Medium.eot");
+    src: url("../fonts/FiraSans-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FiraSans-Medium.woff") format("woff"),
+    url("../fonts/FiraSans-Medium.ttf") format("truetype"),
+    url("../fonts/FiraSans-Medium.svg") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body * {
+    font-family: 'Fira Sans', sans-serif;
+    color: @dark-color;
+    font-weight: 500;
+    font-size: 12px;
+    user-select: none;
+}
+body{
+    width: 359px;
+    margin: 0 auto;
+}
+img{
+    max-width: 50px;
+}
+
+.friends_logo{
+    width: 102px;
+    height: 25px;
+    background: url(../img/sprite.png) 0 0 no-repeat;
+    margin: 15px auto;
+}
+.popup_wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+    .friends_popup{
+        background: #ffffff;
+        width: 618px;
+        margin: 60px auto;
+        border-radius: 7px;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+        .popup_header{
+            background: @funny-color;
+            color: @light-color;
+            font-size: 16px;
+            padding: 16px 14px 13px;
+            #close{
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: url(../img/sprite.png) -1px -26px no-repeat;
+                top: 15px;
+                right: 11px;
+            }
+        }
+        .friends_list{
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            &.left_friends{
+                border-right: 1px solid #f0f0f0;
+                margin-right: -3px;
+            }
+            ul{
+                height: 324px;
+                overflow-y: auto;
+            }
+            .search_wrap{
+                background: @light-bg;
+                padding: 10px 15px;
+                position: relative;
+                input{
+                    color: #9f9f9f;
+                    background: #ffffff;
+                    border: none;
+                    border-radius: 20px;
+                    font-weight: 300;
+                    padding: 4px 27px 3px;
+                    width: 231px;
+                }
+                &:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background: url(../img/sprite.png) -83px -30px no-repeat;
+                    top: 16px;
+                    left: 21px;
+                }
+            }
+            h2{
+                padding: 13px 0px 5px;
+                border-bottom: 1px solid #f0f0f0;
+                margin: 0 15px;
+            }
+        }
+        .popup_footer{
+            background: #f0f0f0;
+            height: 45px;
+            margin-top: -1px;
+            .save{
+                float: right;
+                background: #ff8663;
+                border: none;
+                color: #fff;
+                font-weight: 300;
+                padding: 5px 15px;
+                margin-top: 8px;
+                margin-right: 5px;
+                border-radius: 9px;
+            }
+        }
+    }
+}
+
+.friend{
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 15px;
+    padding: 5px 0;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    background: @light-color;
+    min-width: 279px;
+    &.hide{
+        display: none;
+    }
+    &.current{
+        position: absolute;
+        background: @light-bg;
+        pointer-events: none;
+    }
+    &:hover{
+        background: @light-bg;
+    }
+    .photo{
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 47px;
+        height: 47px;
+        margin-left: 5px;
+        margin-right: 3px;
+        img{
+            width: 100%;
+        }
+    }
+    .name{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .friend_icon{
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        background: url(../img/sprite.png) -26px -26px no-repeat;
+        right: 5px;
+        top: 20px;
+    }
+}
+
+#allFriends .friend_icon{
+    background-position: -54px -28px;
+}
